@@ -34,9 +34,10 @@ of the repository (the 240 runs with all epoch checkpoints take about 12 GB).
 
 ## Setup
 
-Python 3.10 or later. The paper's numbers were produced with Python 3.14.7,
-torch 2.14.0, numpy 2.5.2, pandas 3.0.5, scipy 1.18.1, scikit-learn 1.9.0 and
-matplotlib 3.11.1, on the CPU of an arm64 Mac.
+Python 3.10 or later. The paper's models were trained with Python 3.14.7 and
+torch 2.14.0 on the CPU of an arm64 Mac, and its figures were drawn with
+matplotlib 3.10.9 (other versions lay out the text a few pixels differently).
+The versions of numpy, pandas, scipy and scikit-learn do not affect the numbers.
 
 ```bash
 python3 -m venv .venv

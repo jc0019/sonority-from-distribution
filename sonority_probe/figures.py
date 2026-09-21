@@ -409,7 +409,8 @@ def _stacked_rows(ax, means: pd.DataFrame, *, fs: float, label_min: float) -> No
             v = float(means.loc[source, cat])
             inset = gap / 2 if v > gap else 0
             ax.barh(y, v - 2 * inset, left=left + inset, height=0.74, color=CONTOUR_COLOURS[cat],
-                    linewidth=0, hatch="/////" if cat == "end" else None, hatchcolor="#bdbdbd")
+                    linewidth=0, hatch="/////" if cat == "end" else None,
+                    edgecolor="#bdbdbd" if cat == "end" else "none")  # the edge colour is the hatch colour
             if v >= label_min:
                 dark = cat in ("fall4", "fall3", "rise3", "rise4", "end")
                 ax.text(left + v / 2, y, f"{100 * v:.0f}", ha="center", va="center",
@@ -445,7 +446,7 @@ def plot_contour_expectations(eval_dir: Path, out_dir: Path, arch: str) -> None:
         if ax is not axes[0]:
             ax.set_yticklabels([])
     handles = [Patch(facecolor=CONTOUR_COLOURS[c], hatch="/////" if c == "end" else None,
-                     hatchcolor="#bdbdbd", linewidth=0, label=CONTOUR_LABELS[c])
+                     edgecolor="#bdbdbd" if c == "end" else "none", linewidth=0, label=CONTOUR_LABELS[c])
                for c in CONTOUR_CATEGORIES]
     fig.legend(handles=handles, loc="lower center", ncol=10, frameon=False, fontsize=fs,
                bbox_to_anchor=(0.5, -0.02), handlelength=1.3, handleheight=0.9, columnspacing=0.9,
