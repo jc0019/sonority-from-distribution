@@ -1,7 +1,6 @@
 # How Much Sonority Structure Do Phonotactic Language Models Learn from Distribution?
 
-Code and data for the BlackboxNLP 2026 paper by Jia Can Xu and Mario Giulianelli
-(University College London).
+Code and data for the paper [*How Much Sonority Structure Do Phonotactic Language Models Learn from Distribution?*](https://aclanthology.org/2026.blackboxnlp-1.44/) (Jia Can Xu and Mario Giulianelli, University College London), presented as an oral at the 9th BlackboxNLP Workshop, EMNLP 2026.
 
 `sonority_probe` trains LSTM and Transformer phonotactic language models under
 four input conditions (`feat`, `emb`, `perm`, `rand`), probes the recoverability
@@ -105,6 +104,23 @@ sources when using the data.
 - Bruce Hayes and James White. 2013. Phonological naturalness and phonotactic
   learning. *Linguistic Inquiry* 44(1):45–75.
 - R. L. Weide. 1998. The CMU pronouncing dictionary.
+
+## Citation
+
+```bibtex
+@inproceedings{xu-giulianelli-2026-much,
+    title     = "How Much Sonority Structure Do Phonotactic Language Models Learn from Distribution?",
+    author    = "Xu, Jia Can and Giulianelli, Mario",
+    booktitle = "Proceedings of the 9th {B}lackbox{NLP} Workshop: Analyzing and Interpreting Neural Networks for {NLP}",
+    month     = oct,
+    year      = "2026",
+    address   = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url       = "https://aclanthology.org/2026.blackboxnlp-1.44/",
+    doi       = "10.18653/2026.blackboxnlp-1.44",
+    pages     = "761--782"
+}
+```
 
 ## Licence
 
